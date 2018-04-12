@@ -1,0 +1,36 @@
+/* 
+	Form and input stylesheet
+ */
+// Text input
+.input-text
+	border: none
+
+	background-color: light
+	color: darkish
+
+	font-family: fontSans, Arial, Helvetica, sans-serif
+
+	transition: border .2s ease, color .2s ease, box-shadow .2s ease
+
+	&:focus
+		outline: none
+
+		color: dark
+	&:disabled
+		color: lightish
+	&.round
+		border-radius: 1em
+
+.input-text-light
+	@extend .input-text
+
+.input-text-dark
+	@extend .input-text
+
+	background-color: dark
+	color: lightish
+
+	&:focus
+		color: light
+	&:disabled
+		color: darkish

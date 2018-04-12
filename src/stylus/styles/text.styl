@@ -1,0 +1,84 @@
+/* 
+	Font and text controllers
+ */
+// Import font families
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:300,300i,400,400i,700,700i");
+body
+.f-sans
+	font-family: fontSans, Arial, Helvetica, sans-serif
+.f-mono
+	font-family: fontMono, 'Courier New', Courier, monospace
+.f-condensed
+	font-family: "IBM Plex Condensed", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+
+// Font size
+.f-xs
+	font-size: 1em
+body
+.f-1
+.f-s
+	font-size: 1em
+.f-m
+	font-size: 1.4em
+.f-2
+.f-l
+	font-size: 2em
+.f-3
+.f-xl
+	font-size: 3em
+.f-4
+	font-size: 4em
+
+body
+	@media only screen and (max-width: tablet)
+		font-size: fontSize - 1
+	@media only screen and (min-width: tablet + 1) and (max-width: fullhd)
+		font-size: fontSize
+	@media only screen and (min-width: fullhd + 1)
+		font-size: fontSize + 1
+
+// Font weight
+.f-light
+	font-weight: 300
+.f-regular
+	font-weight: normal
+.f-bold
+	font-weight: bold
+
+// Font style
+.f-normal
+	font-style: normal
+.f-italic
+	font-style: italic
+.f-oblique
+	font-style: oblique
+
+// Text horizontal alignment
+.t-left
+	text-align: left
+.t-center
+	text-align: center
+.t-right
+	text-align: right
+
+// Text vertical alignment
+.t-baseline
+	vertical-align: baseline
+.t-bottom
+	vertical-align: bottom
+.t-middle
+	vertical-align: middle
+.t-top
+	vertical-align: top
+.t-sub
+	vertical-align: sub
+.t-super
+	vertical-align: super
+
+// Text transform
+.t-uppercase
+	text-transform: uppercase
+.t-lowercase
+	text-transform: lowercase
+.t-capitalize
+	text-transform: capitalize

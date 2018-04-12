@@ -1,0 +1,42 @@
+{
+  "name": "snue",
+  "version": "0.0.1",
+  "description": "A simple Vue components library",
+  "main": "dist/snue.min.js",
+  "scripts": {
+    "build": "rm -rf dist && cross-env NODE_ENV=production webpack --config config/config.js --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sneppy/snue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sneppy/snue/issues"
+  },
+  "homepage": "https://github.com/Sneppy/snue#readme",
+  "keywords": [
+    "snue"
+  ],
+  "author": "Sneppy <andrea.mecchia@mail.polimi.it>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.4",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue": "^2.5.16",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3",
+    "webpack-merge": "^4.1.2"
+  },
+  "peerDependencies": {
+    "vue": "^2.5.0"
+  }
+}

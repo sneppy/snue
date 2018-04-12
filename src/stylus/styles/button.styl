@@ -1,0 +1,49 @@
+/* 
+	Button stylesheet
+ */
+// Buttons
+.btn
+	border: none
+	
+	background-color: light
+	color: dark
+
+	font-family: fontSans, Arial, Helvetica, sans-serif
+
+	cursor: pointer
+	transition: background-color .2s ease
+
+	&:focus
+	&:hover
+		outline: none
+	&:hover
+		background-color: lighter
+		color: darker
+	&.round
+		border-radius: 1em
+
+.btn-light
+	@extend .btn
+
+.btn-dark
+	@extend .btn
+	background-color: dark
+	color: light
+
+	&:hover
+		background-color: darker
+		color: lighter
+
+.btn-primary
+	@extend .btn-dark
+	background-color: primary
+
+	&:hover
+		background-color: lighten(primary, 5)
+
+.btn-secondary
+	@extend .btn-dark
+	background-color: secondary
+
+	&:hover
+		background-color: lighten(secondary, 5)
