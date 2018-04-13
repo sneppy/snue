@@ -1,4 +1,31 @@
-@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:300,300i,400,400i,700,700i);.btn,
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:300,300i,400,400i,700,700i);.notification {
+  position: fixed;
+  left: 0;
+  top: 0;
+  color: #f5f5f5;
+}
+.notification.info {
+  background-color: #708090;
+}
+.notification.success {
+  background-color: #90ee90;
+}
+.notification.error {
+  background-color: #cd5c5c;
+}
+.notification.warning {
+  background-color: #f08080;
+}
+.notification .message {
+  display: inline-block;
+  vertical-align: middle;
+}
+.notification .close {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.btn,
 .btn-light,
 .btn-dark,
 .btn-primary,
@@ -35,7 +62,7 @@
 .btn-dark.round,
 .btn-primary.round,
 .btn-secondary.round {
-  border-radius: 1em;
+  border-radius: 10em;
 }
 .btn-dark,
 .btn-primary,
@@ -84,7 +111,7 @@
 .input-text.round,
 .input-text-light.round,
 .input-text-dark.round {
-  border-radius: 1em;
+  border-radius: 10em;
 }
 .input-text-dark {
   background-color: #345;
@@ -95,6 +122,9 @@
 }
 .input-text-dark:disabled {
   color: #465d75;
+}
+.icon-md {
+  font-family: "Material Icons", "IBM Plex Sans", Arial, Helvetica, sans-serif;
 }
 .d-block {
   display: block;
@@ -608,7 +638,7 @@ body,
 @-moz-keyframes fade-down {
   0% {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(-8px);
   }
   100% {
     opacity: 1;
@@ -618,7 +648,7 @@ body,
 @-webkit-keyframes fade-down {
   0% {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(-8px);
   }
   100% {
     opacity: 1;
@@ -628,7 +658,7 @@ body,
 @-o-keyframes fade-down {
   0% {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(-8px);
   }
   100% {
     opacity: 1;
@@ -638,7 +668,7 @@ body,
 @keyframes fade-down {
   0% {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(-8px);
   }
   100% {
     opacity: 1;
@@ -648,7 +678,7 @@ body,
 @-moz-keyframes fade-up {
   0% {
     opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(8px);
   }
   100% {
     opacity: 1;
@@ -658,7 +688,7 @@ body,
 @-webkit-keyframes fade-up {
   0% {
     opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(8px);
   }
   100% {
     opacity: 1;
@@ -668,7 +698,7 @@ body,
 @-o-keyframes fade-up {
   0% {
     opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(8px);
   }
   100% {
     opacity: 1;
@@ -678,7 +708,7 @@ body,
 @keyframes fade-up {
   0% {
     opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(8px);
   }
   100% {
     opacity: 1;

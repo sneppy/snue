@@ -1,5 +1,8 @@
 // Import components
-const components = [];
+import Notification from "./components/Notification"
+const components = [
+	Notification
+];
 
 // Import styles
 import "./stylus/main.styl";
