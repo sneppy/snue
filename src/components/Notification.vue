@@ -4,13 +4,16 @@
 			:class="level"
 			:style="{left, right, top, bottom}"
 			v-if="show">
-			<span class="message"><slot>Alert</slot></span>
+			<span class="message"><slot/></span>
 			<span class="close icon-md" role="button" @click="hide">cancel</span>
 		</div>
 	</transition>
 </template>
 
 <script>
+/**
+ * Display a notification message
+ */
 export default {
 	name: "notification",
 	props: {
@@ -29,6 +32,10 @@ export default {
 		margin: {
 			type: String,
 			default: "1em"
+		},
+		closeIconClass: {
+			type: String,
+			default: "md"
 		}
 	},
 	data() {

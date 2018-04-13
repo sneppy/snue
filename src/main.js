@@ -1,7 +1,9 @@
 // Import components
-import Notification from "./components/Notification"
+import Notification	from "./components/Notification"
+import Position		from "./components/Position"
 const components = [
-	Notification
+	Notification,
+	Position
 ];
 
 // Import styles
