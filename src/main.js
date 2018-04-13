@@ -6,6 +6,7 @@ import Notification	from "./components/Notification"
 import PieChart		from "./components/PieChart"
 import Position		from "./components/Position"
 import Stack		from "./components/Stack"
+import UserAvatar	from "./components/UserAvatar"
 const components = [
 	Card,
 	Drawer,
@@ -13,7 +14,8 @@ const components = [
 	Notification,
 	PieChart,
 	Position,
-	Stack
+	Stack,
+	UserAvatar
 ];
 
 // Import styles
