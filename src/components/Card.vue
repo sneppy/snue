@@ -6,6 +6,9 @@
 </template>
 
 <script>
+/**
+ * Material design like card component
+ */
 export default {
 	name: "card",
 	props: {

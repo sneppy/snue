@@ -3,6 +3,7 @@ import Card			from "./components/Card"
 import Drawer		from "./components/Drawer"
 import LineGraph	from "./components/LineGraph"
 import Notification	from "./components/Notification"
+import PieChart		from "./components/PieChart"
 import Position		from "./components/Position"
 import Stack		from "./components/Stack"
 const components = [
@@ -10,6 +11,7 @@ const components = [
 	Drawer,
 	LineGraph,
 	Notification,
+	PieChart,
 	Position,
 	Stack
 ];

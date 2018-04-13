@@ -5,6 +5,9 @@
 </template>
 
 <script>
+/**
+ * Stack layers on top of each other
+ */
 export default {
 	name: "stack",
 	methods: {

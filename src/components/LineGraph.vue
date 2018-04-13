@@ -12,6 +12,9 @@
 </template>
 
 <script>
+/**
+ * Display data in a line graph
+ */
 export default {
 	name: "line-graph",
 	props: {
