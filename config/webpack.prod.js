@@ -8,7 +8,7 @@ const cssSourceMaps		= process.env.TARGET === 'development'
 const extractPlugin		= ExtractTextPlugin.extract({
 	use: [
 		{ loader: 'css-loader', options: { sourceMap: cssSourceMaps } },
-		{ loader: 'stylus-loader', options: { sourceMap: cssSourceMaps } },
+		{ loader: 'stylus-loader', options: { sourceMap: cssSourceMaps, compress: true } },
 	]
 });
 
