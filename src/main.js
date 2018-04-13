@@ -4,12 +4,14 @@ import Drawer		from "./components/Drawer"
 import LineGraph	from "./components/LineGraph"
 import Notification	from "./components/Notification"
 import Position		from "./components/Position"
+import Stack		from "./components/Stack"
 const components = [
 	Card,
 	Drawer,
 	LineGraph,
 	Notification,
-	Position
+	Position,
+	Stack
 ];
 
 // Import styles
