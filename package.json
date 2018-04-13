@@ -4,7 +4,7 @@
   "description": "A simple Vue components library",
   "main": "dist/snue.min.js",
   "scripts": {
-    "build": "rm -rf dist && cross-env NODE_ENV=production webpack --config config/config.js --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --config config/config.js --progress --hide-modules"
   },
   "repository": {
     "type": "git",
@@ -35,8 +35,5 @@
     "webpack-cli": "^2.0.14",
     "webpack-dev-server": "^3.1.3",
     "webpack-merge": "^4.1.2"
-  },
-  "peerDependencies": {
-    "vue": "^2.5.0"
   }
 }
