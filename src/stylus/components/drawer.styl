@@ -1,0 +1,76 @@
+/* 
+	Drawer stylesheet
+ */
+.drawer
+	position: fixed
+	top: 0
+
+	&.left
+		left: 0
+
+		& > .backdrop
+			left: 0
+
+		// Drawer slide animation
+		.slide-enter
+		.slide-leave-to
+			left: -300px
+
+		.slide-enter-to
+		.slide-leave
+			left: 0
+
+		.slide-enter-active
+		.slide-leave-active
+			transition: left .2s ease
+	&.right
+		right: 0
+
+		& > .backdrop
+			right: 0
+
+		// Drawer slide animation
+		.slide-enter
+		.slide-leave-to
+			right: -300px
+		
+		.slide-enter-to
+		.slide-leave
+			right: 0
+
+		.slide-enter-active
+		.slide-leave-active
+			transition: right .2s ease
+	
+	// Sliding element
+	& > .inner
+		width: 300px
+		height: 100vh
+		overflow-y: hidden
+
+		position: relative
+		z-index: 1000
+
+		&.light
+			background-color: light
+			color: dark
+		&.dark
+		&.primary
+		&.secondary
+			color: light
+		&.dark
+			background-color: dark
+		&.primary
+			background-color: primary
+		&.secondary
+			background-color: secondary
+
+	& > .backdrop
+		width: 100vw
+		height: 100vh
+
+		position: absolute
+		top: 0
+
+		background-color: rgba(0, 0, 0, 0.4)
+			

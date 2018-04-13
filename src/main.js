@@ -1,7 +1,9 @@
 // Import components
+import Drawer		from "./components/Drawer"
 import Notification	from "./components/Notification"
 import Position		from "./components/Position"
 const components = [
+	Drawer,
 	Notification,
 	Position
 ];
