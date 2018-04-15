@@ -1,27 +1,49 @@
 /* 
 	Notification stylesheet
  */
-.notification
+.notification-container
+	display: flex
+
 	position: fixed
 	left: 0
+	right: 0
 	top: 0
+	bottom: 0
+	z-index: 1050
 
-	color: light
+	pointer-events: none
 
-	&.info
-		background-color: info
-	&.success
-		background-color: success
-	&.error
-		background-color: error
-	&.warning
-		background-color: warning
+	& > .notification
+		position: relative
 
-	& > .message
-		display: inline-block
-		vertical-align: middle
-		
-	& > .close
-		display: inline-block
-		vertical-align: middle
-		cursor: pointer
+		padding-right: 2em
+
+		color: light
+
+		pointer-events: auto
+
+		&.info
+			background-color: info
+		&.success
+			background-color: success
+		&.error
+			background-color: error
+		&.warning
+			background-color: warning
+
+		& > .message
+			display: inline-block
+
+			vertical-align: middle
+			
+		& > .close
+			display: inline-block
+			position: absolute
+			top: 0
+			right: 0
+
+			padding: 0.5em
+
+			vertical-align: middle
+
+			cursor: pointer

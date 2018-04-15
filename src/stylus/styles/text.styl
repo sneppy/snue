@@ -4,7 +4,8 @@
 // Import font families
 fontSansSource = replace(" ", "+", fontSans)
 fontMonoSource = replace(" ", "+", fontMono)
-@import url("https://fonts.googleapis.com/css?family="+fontMonoSource+":400,400i|IBM+Plex+Sans+Condensed:400,400i|"+fontSansSource+":300,300i,400,400i,700,700i")
+@css
+	@import url("https://fonts.googleapis.com/css?family="+fontMonoSource+":400,400i|IBM+Plex+Sans+Condensed:400,400i|"+fontSansSource+":300,300i,400,400i,700,700i")
 body
 .f-sans
 	font-family: fontSans, Arial, Helvetica, sans-serif
@@ -15,7 +16,7 @@ body
 
 // Font size
 .f-xs
-	font-size: 1em
+	font-size: 0.8em
 body
 .f-1
 .f-s
@@ -33,11 +34,11 @@ body
 
 body
 	@media only screen and (max-width: tablet)
-		font-size: fontSize - 1
+		font-size: unit(fontSize - 1, "px")
 	@media only screen and (min-width: tablet + 1) and (max-width: fullhd)
-		font-size: fontSize
+		font-size: unit(fontSize, "px")
 	@media only screen and (min-width: fullhd + 1)
-		font-size: fontSize + 1
+		font-size: unit(fontSize + 1, "px")
 
 // Font weight
 .f-light

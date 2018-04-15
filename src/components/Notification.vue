@@ -1,13 +1,15 @@
 <template>
-	<transition :name="animation">
-		<div class="notification"
-			:class="level"
-			:style="{left, right, top, bottom}"
-			v-if="show">
-			<span class="message"><slot/></span>
-			<span class="close icon-md" role="button" @click="hide">cancel</span>
-		</div>
-	</transition>
+	<div class="notification-container"
+		:style="{justifyContent, alignItems, padding: margin}">
+		<transition :name="animation">
+			<div class="notification"
+				:class="level+' '+classes"
+				v-if="show">
+				<span class="message"><slot/></span>
+				<span class="close icon-md" role="button" @click="hide">close</span>
+			</div>
+		</transition>
+	</div>
 </template>
 
 <script>
@@ -25,6 +27,10 @@ export default {
 			type: String,
 			default: "center top"
 		},
+		classes: {
+			type: String,
+			required: false
+		},
 		animation: {
 			type: String,
 			default: "fade-down"
@@ -36,6 +42,10 @@ export default {
 		closeIconClass: {
 			type: String,
 			default: "md"
+		},
+		autoclose: {
+			type: Number,
+			default: 0
 		}
 	},
 	data() {
@@ -45,46 +55,47 @@ export default {
 		}
 	},
 	computed: {
-		left() {
+		// Horizontal axis
+		justifyContent() {
+
+			// 'center' === 'center center'
+			if (this.pos === "center") return this.pos;
 
 			const x = this.pos.split(" ")[0];
 			if (x !== undefined)
 			{
-				if (x === "left")			return this.margin
-				else if (x === "center")	return "50%"
-				else						return "auto"
+				if (x === "left")		return "flex-start";
+				else if (x === "right")	return "flex-end";
+				else					return "center";
 			}
-			
-			// Default value
-			return this.margin;
-		},
-		right() {
-			
-			if (this.left === "auto")	return this.margin
-			else						return "auto"
-		},
-		top() {
 
-			const y = this.pos.split(" ")[1];
-			if (y !== undefined)
-			{
-				if (y === "top")	return this.margin
-				else				return "auto"
-			}
-			
 			// Default value
-			return this.margin;
+			return "center";
 		},
-		bottom() {
-			
-			if (this.top === "auto")	return this.margin
-			else						return "auto"
+		// Vertical axis
+		alignItems() {
+
+			// 'center' === 'center center'
+			if (this.pos === "center") return this.pos;
+
+			const x = this.pos.split(" ")[1];
+			if (x !== undefined)
+			{
+				if (x === "top")			return "flex-start";
+				else if (x === "bottom")	return "flex-end";
+				else						return "center";
+			}
+
+			// Default value
+			return "center";
 		}
 	},
 	methods: {
 		display() {
 
 			this.show = true;
+			this.updateMargin();
+			if (this.autoclose > 0) setTimeout(() => this.show = false, this.autoclose * 1000)
 		},
 		hide() {
 			
@@ -92,18 +103,7 @@ export default {
 		},
 		toggle() {
 
-			this.show = !this.show;
-		}
-	},
-	/**
-	 * If position is center, set margin offset after component is updated
-	 */
-	updated() {
-
-		if (this.show && this.left === "50%")
-		{
-			const w = this.$el.offsetWidth;
-			this.$el.style.marginLeft = "-"+(w / 2)+"px";
+			this.show ? this.hide() : this.display();
 		}
 	}
 }
