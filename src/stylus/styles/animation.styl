@@ -53,6 +53,14 @@
 		opacity: 1
 		transform: none
 
+@keyframes flip-y-180
+	0%
+		opacity: 0
+		transform: rotateY(180deg)
+	100%
+		opacity: 1
+		transform: none
+
 // Vue transitions
 .fade-enter-active
 	animation: fade .2s
@@ -98,3 +106,8 @@
 	animation: fade-down .2s
 .fade-down-leave-active
 	animation: fade-down .2s reverse
+
+.flip-y-180-enter-active
+	animation: flip-y-180 .2s
+.flip-y-180-leave-active
+	animation: flip-y-180 .2s reverse

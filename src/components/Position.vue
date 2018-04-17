@@ -1,6 +1,6 @@
 <template>
-	<div class="center"
-		:class="method"
+	<div class="position"
+		:class="method+' '+(fixed ? 'fixed' : '')"
 		:style="{justifyContent, alignItems}">
 		<slot/>
 	</div>
@@ -20,6 +20,10 @@ export default {
 		pos: {
 			type: String,
 			default: "center"
+		},
+		fixed: {
+			type: Boolean,
+			default: false
 		}
 	},
 	computed: {

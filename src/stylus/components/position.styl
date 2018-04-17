@@ -1,7 +1,7 @@
 /* 
 	Position stylesheet
  */
-.center
+.position
 	display: flex
 	justify-content: center
 	align-items: center
@@ -15,3 +15,12 @@
 		right: 0
 		top: 0
 		bottom: 0
+
+		// Pointer events disabled for container
+		pointer-events: none
+	&.fixed
+		position: fixed
+
+	// Restore child pointer events
+	& > *
+		pointer-events: visible

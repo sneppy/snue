@@ -51,7 +51,8 @@ export default {
 	data() {
 
 		return {
-			show: false
+			show: false,
+			timer: null
 		}
 	},
 	computed: {
@@ -94,12 +95,14 @@ export default {
 		display() {
 
 			this.show = true;
-			this.updateMargin();
-			if (this.autoclose > 0) setTimeout(() => this.show = false, this.autoclose * 1000)
+			// Reset timer
+			if (this.timer) clearTimeout(this.timer);
+			if (this.autoclose > 0) this.timer = setTimeout(() => this.show = false, this.autoclose * 1000)
 		},
 		hide() {
 			
 			this.show = false;
+			this.timer = null;
 		},
 		toggle() {
 
