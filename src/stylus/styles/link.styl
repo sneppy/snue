@@ -1,0 +1,38 @@
+/* 
+	Link stylesheet
+ */
+.link
+	color: dark
+	text-decoration: none
+
+	&:hover
+		text-decoration: underline
+
+		&.plain
+			text-decoration: none
+	&:visited
+		color: dark
+
+.link-light
+	@extends .link
+
+.link-dark
+	@extends .link
+	color: light
+
+	&:visited
+		color: light
+
+.link-primary
+	@extends .link
+	color: primary
+
+	&:visited
+		color: primary
+
+.link-secondary
+	@extends .link
+	color: secondary
+
+	&:visited
+		color: secondary
