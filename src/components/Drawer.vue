@@ -13,7 +13,8 @@
 
 		<transition :name="backdropAnimation">
 			<div class="backdrop"
-				v-if="backdrop && show">
+				v-if="backdrop && show"
+				@click="close">
 			</div>
 		</transition>
 	</div>
