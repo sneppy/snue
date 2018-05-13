@@ -6,6 +6,7 @@ import LineGraph	from "./components/LineGraph"
 import Notification	from "./components/Notification"
 import PieChart		from "./components/PieChart"
 import Position		from "./components/Position"
+import Slideshow	from "./components/Slideshow"
 import Stack		from "./components/Stack"
 import UserAvatar	from "./components/UserAvatar"
 const components = [
@@ -16,6 +17,7 @@ const components = [
 	Notification,
 	PieChart,
 	Position,
+	Slideshow,
 	Stack,
 	UserAvatar
 ];

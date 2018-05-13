@@ -44,6 +44,9 @@
 		flex-wrap: wrap-reverse
 
 // Sizes
+.s-0
+	width: 0
+	height: 0
 .s-xs
 	width: 0.5em
 	height: 0.5em
@@ -77,6 +80,8 @@
 	width: 50%
 	height: 50%
 
+.w-0
+	width: 0
 .w-xs
 	width: 0.5em
 .w-1
@@ -100,6 +105,8 @@
 .w-half
 	width: 50%
 
+.w-0
+	height: 0
 .h-xs
 	height: 0.5em
 .h-1
@@ -123,6 +130,33 @@
 .h-half
 	height: 50%
 
+// Hide
+.ge-tablet
+	@media only screen and (max-width: unit(phone, px))
+		display: none
+.ge-desktop
+	@media only screen and (max-width: unit(tablet, px))
+		display: none
+.ge-fullhd
+	@media only screen and (max-width: unit(desktop, px))
+		display: none
+.ge-ultrahd
+	@media only screen and (max-width: unit(fullhd, px))
+		display: none
+
+.le-phone
+	@media only screen and (min-width: unit(phone + 1, px))
+		display: none
+.le-tablet
+	@media only screen and (min-width: unit(tablet + 1, px))
+		display: none
+.le-desktop
+	@media only screen and (min-width: unit(desktop + 1, px))
+		display: none
+.le-fullhd
+	@media only screen and (min-width: unit(fullhd + 1, px))
+		display: none
+
 // Container
 container()
 	position: relative
@@ -133,8 +167,8 @@ container()
 	max-width: 600px
 	container()
 .container-desktop
-	max-width: 1280px
+	max-width: 1200px
 	container()
 .container-fullhd
-	max-width: 1920px
+	max-width: 1900px
 	container()

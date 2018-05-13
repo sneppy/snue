@@ -1,0 +1,79 @@
+/* 
+	Slideshow stylesheet
+ */
+.slideshow
+	position: relative
+
+	user-select: none
+
+	.container
+		width: 100%
+		height: 100%
+
+		position: relative
+		float: left
+
+		overflow-x: hidden
+	
+	.slides
+		position: absolute
+
+		box-shadow: 0 0 8px 8px rgba(#345, 0.4)
+
+		cursor: pointer
+		
+		transition: left .2s ease-out
+
+		&.moving
+			transition: left .05s
+
+		.cover
+			width: 100%
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+
+	.nav
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		z-index: 990
+
+		pointer-events: none
+
+		& > *
+			pointer-events: auto
+
+	.nav-controls
+		padding: 0.5em
+
+		background-color: transparent
+		color: whitesmoke
+
+		text-shadow: 1px 1px rgba(#345, 0.2)
+
+		cursor: pointer
+		transition: background-color .2s ease, color .2s ease
+
+	.quick-nav
+		z-index: 990
+
+	.dot
+		margin: 0.4em
+		padding: 0.3em
+		border-radius: 0.3em
+
+		box-shadow: 1px 1px rgba(#345, 0.2)
+
+		background-color: whitesmoke
+
+		cursor: pointer
+
+		transition: transform .1s ease
+
+		&.active
+			background-color: cornflowerblue
