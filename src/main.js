@@ -1,8 +1,12 @@
 import Vue from 'vue'
-import App from './App.vue'
 
-Vue.config.productionTip = false
+// Import style
+import './style/main.styl'
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+const components = [];
+
+// Globally register components
+for (const comp of components)
+	Vue.component(comp.name, comp);
+
+export default components;
