@@ -2,6 +2,12 @@
   "name": "@sneppy/snue",
   "version": "0.1.0",
   "description": "A simple library of components for Vue 2.x",
+  "homepage": "https://github.com/Sneppy/snue#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sneppy/snue.git"
+  },
+  "main": "./dist/snue.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -38,11 +44,5 @@
     "public/*",
     "*.json",
     "*.js"
-  ],
-  "homepage": "https://github.com/Sneppy/snue#readme",
-  "main": "./dist/snue.common.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Sneppy/snue.git"
-  }
+  ]
 }

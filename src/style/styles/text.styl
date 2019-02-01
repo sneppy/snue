@@ -1,0 +1,96 @@
+// Import font families
+fontSerifSource	= replace(" ", "+", fontSerif)
+fontSansSource	= replace(" ", "+", fontSans)
+fontMonoSource	= replace(" ", "+", fontMono)
+fontHandSource	= replace(" ", "+", fontHand)
+@import url( "https://fonts.googleapis.com/css?family="+fontSerifSource+":300,300i,400,400i,700,700i|"+fontMonoSource+":400,400i,700,700i|"+fontSansSource+":300,300i,400,400i,700,700i|"+fontHandSource+":400,700")
+
+// Font families
+.f-serif
+	font-family: fontSerif, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+.f-sans
+	font-family: fontSans, Arial, Helvetica, sans-serif
+.f-mono
+	font-family: fontMono, 'Courier New', Courier, monospace
+.f-hand
+	font-family: fontHand, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
+// Font size
+.f-xs
+	font-size: 0.7em
+.f-1
+.f-s
+	font-size: 1em
+.f-m
+	font-size: 1.4em
+.f-2
+.f-l
+	font-size: 2em
+.f-3
+.f-xl
+	font-size: 3em
+.f-4
+	font-size: 4em
+
+// Automatic resize base font size to fit screen size
+body
+	@media only screen and (max-width: unit(media-tablet-max, px))
+		font-size: unit(fontSize - 1, "px")
+	@media only screen and (min-width: unit(media-fullhd-min, px)) and (max-width: unit(media-fullhd-max, px))
+		font-size: unit(fontSize, "px")
+	@media only screen and (min-width: unit(media-fullhd-min, px))
+		font-size: unit(fontSize + 1, "px")
+
+// Font weight
+.f-light
+	font-weight: 300
+.f-regular
+	font-weight: normal
+.f-bold
+	font-weight: bold
+
+// Font style
+.f-normal
+	font-style: normal
+.f-italic
+	font-style: italic
+.f-oblique
+	font-style: oblique
+
+// Text horizontal alignment
+.t-left
+	text-align: left
+.t-center
+	text-align: center
+.t-right
+	text-align: right
+
+// Text vertical alignment
+.t-baseline
+	vertical-align: baseline
+.t-bottom
+	vertical-align: bottom
+.t-middle
+	vertical-align: middle
+.t-top
+	vertical-align: top
+.t-sub
+	vertical-align: sub
+.t-super
+	vertical-align: super
+
+// Text transform
+.t-uppercase
+	text-transform: uppercase
+.t-lowercase
+	text-transform: lowercase
+.t-capitalize
+	text-transform: capitalize
+
+// Selectable text
+.t-select-auto
+	user-select: auto
+.t-select-none
+	user-select: none
+.t-select-contain
+	user-select: contain

@@ -1,0 +1,264 @@
+/* 
+	Element display and sizes stylesheet
+ */
+.d-block
+	display: block
+.d-inline
+	display: inline
+.d-inlineblock
+	display: inline-block
+.d-flex
+	display: flex
+.d-inlineflex
+	display: inline-flex
+.d-flex
+.d-inlineflex
+	&.row
+		flex-direction: row
+	&.column
+		flex-direction: column
+	&.start
+		justify-content: flex-start
+	&.center
+		justify-content: center
+	&.end
+		justify-content: flex-end
+	&.between
+		justify-content: space-between
+	&.around
+		justify-content: space-around
+
+	&.stretch
+		align-items: stretch
+	&.top
+		align-items: flex-start
+	&.middle
+		align-items: center
+	&.bottom
+		align-items: flex-end
+	&.baseline
+		align-items: baseline
+	
+	&.nowrap
+		flex-wrap: nowrap
+	&.wrap
+		flex-wrap: wrap
+	&.wraprev
+		flex-wrap: wrap-reverse
+
+.d-grid
+	display: grid
+
+	&.even-rows
+		grid-auto-rows: 1fr
+	&.even-cols
+		grid-auto-columns: 1fr
+	col-n(n)
+		grid-template-columns: repeat(n, 1fr)
+	&.col-2
+		col-n(2)
+	&.col-3
+		col-n(3)
+	&.col-4
+		col-n(4)
+	&.col-5
+		col-n(5)
+	&.col-6
+		col-n(6)
+	&.col-8
+		col-n(8)
+
+// Sizes
+.s-0
+	width: 0
+	height: 0
+.s-xs
+	width: 0.5em
+	height: 0.5em
+.s-1
+.s-s
+	width: 1em
+	height: 1em
+.s-m
+	width: 1.6em
+	height: 1.6em
+.s-2
+	width: 2em
+	height: 2em
+.s-l
+	width: 2.5em
+	height: 2.5em
+.s-3
+	width: 3em
+	height: 3em
+.s-4
+.s-xl
+	width: 4em
+	height: 4em
+.s-5
+	width: 5em
+	height: 5em
+.s-8
+	width: 8em
+	height: 8em
+.s-16
+	width: 16em
+	height: 16em
+.s-44
+	width: 44em
+	height: 44em
+.s-64
+	width: 64em
+	height: 16em
+.s-96
+	width: 96em
+	height: 96em
+.s-128
+	width: 128em
+	height: 128em
+.s-144
+	width: 144em
+	height: 144em
+.s-fill
+	width: 100%
+	height: 100%
+.s-half
+	width: 50%
+	height: 50%
+
+.w-0
+	width: 0
+.w-xs
+	width: 0.5em
+.w-1
+.w-s
+	width: 1em
+.w-m
+	width: 1.6em
+.w-2
+	width: 2em
+.w-l
+	width: 2.5em
+.w-3
+	width: 3em
+.w-4
+.w-xl
+	width: 4em
+.w-5
+	width: 5em
+.w-8
+	width: 8em
+.w-16
+	width: 16em
+.w-44
+	width: 44em
+.w-64
+	width: 64em
+.w-96
+	width: 96em
+.w-128
+	width: 128em
+.w-144
+	width: 144em
+.w-fill
+	width: 100%
+.w-half
+	width: 50%
+
+.w-0
+	height: 0
+.h-xs
+	height: 0.5em
+.h-1
+.h-s
+	height: 1em
+.h-m
+	height: 1.6em
+.h-2
+	height: 2em
+.h-l
+	height: 2.5em
+.h-3
+	height: 3em
+.h-4
+.h-xl
+	height: 4em
+.h-5
+	height: 5em
+.h-8
+	height: 8em
+.h-16
+	height: 16em
+.h-44
+	height: 44em
+.h-64
+	height: 16em
+.h-96
+	height: 96em
+.h-128
+	height: 128em
+.h-144
+	height: 144em
+.h-fill
+	height: 100%
+.h-half
+	height: 50%
+
+// Position
+.p-static
+	position: static
+.p-relative
+	position: relative
+.p-absolute
+	position: absolute
+.p-fixed
+	position: fixed
+
+// Hide
+.ge-tablet
+	@media only screen and (max-width: unit(media-phone-max, px))
+		display: none
+.ge-desktop
+	@media only screen and (max-width: unit(media-tablet-max, px))
+		display: none
+.ge-fullhd
+	@media only screen and (max-width: unit(media-desktop-max, px))
+		display: none
+.ge-ultrahd
+	@media only screen and (max-width: unit(media-fullhd-max, px))
+		display: none
+
+.le-phone
+	@media only screen and (min-width: unit(media-phone-min + 1, px))
+		display: none
+.le-tablet
+	@media only screen and (min-width: unit(media-tablet-min + 1, px))
+		display: none
+.le-desktop
+	@media only screen and (min-width: unit(media-desktop-min + 1, px))
+		display: none
+.le-fullhd
+	@media only screen and (min-width: unit(media-fullhd-min + 1, px))
+		display: none
+
+// Containers
+container()
+	position: relative
+	
+	margin-left: auto
+	margin-right: auto
+
+.container-phone
+	max-width: unit(media-phone-min, px)
+	container()
+.container-tablet
+	max-width: unit(media-tablet-min, px)
+	container()
+.container-desktop
+	max-width: unit(media-desktop-min, px)
+	container()
+.container-fullhd
+	max-width: unit(media-fullhd-min, px)
+	container()
+.container-ultrahd
+	container()

@@ -1,12 +1,23 @@
-import Vue from 'vue'
+import {components} from './components'
+import {directives} from './directives'
 
-// Import style
-import './style/main.styl'
+const plugin = {
+	/// Installation script
+	install(Vue, options) {
 
-const components = [];
+		// Do not install twice
+		if (this.installed) return
+		this.installed = true
 
-// Globally register components
-for (const comp of components)
-	Vue.component(comp.name, comp);
+		// Globally register components
+		for (const comp of components)
+			Vue.component(comp.name, comp)
+		
+		// Register directive
+		for (const dir of directives)
+			Vue.directive(dir.name, dir)
+	}
+}
 
-export default components;
+export default plugin
+export {components}
