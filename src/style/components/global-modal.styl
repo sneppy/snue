@@ -1,0 +1,33 @@
+.global-modal
+	width: 100vw
+	height: 100vh
+
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 2001
+
+	overflow-x: hidden
+	overflow-y: auto
+
+	pointer-events: none
+
+	.inner
+		position: relative
+
+		margin: 2em
+
+		pointer-events: auto
+	
+	.background
+		min-width: 100vw
+		min-height: 100vh
+
+		position: fixed
+		top: 0
+		left: 0
+		z-index: -1
+
+		background-color: rgba(dark, 0.5)
+
+		pointer-events: auto
