@@ -24,7 +24,7 @@ export default {
 		/// Axis, 'x' or 'y'
 		axis: {
 			type: String,
-			default: 'x',
+			default: 'y',
 			validator: (val) => val === 'x' || val === 'y'
 		},
 		
@@ -40,7 +40,7 @@ export default {
 		/// Flag to invert axis direction
 		invertAxis: {
 			type: Boolean,
-			default: false
+			default: true
 		},
 
 		/// Min value, value will not be decremented below this
